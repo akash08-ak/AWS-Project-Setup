@@ -44,7 +44,8 @@ pipeline {
 Defines the setup for a Node.js container.
 
 ### 📌 Code:
-```# Use Node.js version 18 as the base image  
+```
+# Use Node.js version 18 as the base image  
 FROM node:18  
 
 # Set the working directory inside the container  
