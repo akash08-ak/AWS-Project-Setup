@@ -191,12 +191,13 @@ Navigate to **Manage Jenkins > Manage Nodes > New Node**. Enter a name, select P
 - **Via CLI:**  
 ```bash
 java -jar jenkins-cli.jar install-plugin <PLUGIN_NAME>
+```
 
-
-Via UI:  
+- **Via UI:**
+ ```bash
 Manage Jenkins > Manage Plugins  
 Search and install required plugin.
-
+```
 ---
 
 **Q: What is JNLP and why is it used in Jenkins?**  
