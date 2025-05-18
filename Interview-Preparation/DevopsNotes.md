@@ -38,27 +38,27 @@ AWS is a giant network of computers spread across the world. These computers are
 ---
 # 🗄️ Storage Services in AWS
 ---
-## 1️⃣ S3 (Simple Storage Service) 📂
+### 1️⃣ S3 (Simple Storage Service) 📂
 Think of S3 as a massive online storage system where you can keep files, documents, images, and videos.
 
 - **Buckets:** Like folders, used to organize files.
 - **Objects:** The actual files stored.
 - **Permissions:** Control who can access data.
 
-## 2️⃣ EBS (Elastic Block Store) 💾
+### 2️⃣ EBS (Elastic Block Store) 💾
 EBS works like a virtual hard drive for cloud servers.
 
 - **Used for:** Databases, applications, high-speed workloads.
 - **Snapshots:** Create backups easily.
 - **Attach/detach:** Volumes for EC2 instances.
 
-## 3️⃣ EFS (Elastic File System) 🗂️
+### 3️⃣ EFS (Elastic File System) 🗂️
 EFS is shared storage that multiple EC2 instances can access at the same time.
 
 - **Ideal for:** Content management, big data analytics, file sharing.
 - **Scalable:** Automatically adjusts based on usage.
 
-## 4️⃣ AWS Backup 🔄
+### 4️⃣ AWS Backup 🔄
 A managed service that automates backups for AWS resources.
 
 - **Centralized management.**
@@ -66,16 +66,16 @@ A managed service that automates backups for AWS resources.
 - **Prevents accidental data loss.**
 
 ---
-
 # 🗃️ Database Services in AWS
-## 1️⃣ RDS (Relational Database Service) 📊
+---
+### 1️⃣ RDS (Relational Database Service) 📊
 Traditional database service that organizes data into structured tables.
 
 - **Engines:** MySQL, PostgreSQL, SQL Server, Oracle.
 - **AWS manages:** Setup, scaling, backups.
 - **Used for:** Business apps, websites, transactional systems.
 
-## 2️⃣ DynamoDB (NoSQL Database) ⚡
+### 2️⃣ DynamoDB (NoSQL Database) ⚡
 Unlike RDS, DynamoDB stores data in key-value pairs.
 
 - **Super fast & scalable.**
