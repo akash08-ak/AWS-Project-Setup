@@ -164,17 +164,15 @@ Instead of running a server all the time, Lambda runs small functions on demand 
 
 
 ---
+# 🔐 IAM & 🛡️ Security 
 ---
-## 🔐 IAM (Identity and Access Management)
-IAM helps organizations manage who can access their technology and resources securely. It ensures the right people have the right access to the right tools.
-
-### 🏰 AWS IAM
-AWS IAM is a service that lets you control access to AWS resources. It helps you manage:
+### 🔐 IAM (Identity and Access Management)
+IAM helps organizations manage who can access their technology and resources securely. It ensures the right people have the right access to the right tools. AWS IAM is a service that lets you control access to AWS resources. It helps you manage:
 
 - **🔑 Authentication** – Who can sign in.
 - **✅ Authorization** – What actions they can perform.
 
-### Key Components:
+#### Key Components:
 - **👤 Users** – Individual accounts with specific permissions (5,000 users per account).
 - **👥 Groups** – A collection of users with shared permissions (300 groups per account).
 - **🎭 Roles** – Temporary access permissions for users or applications (1,000 roles per account).
@@ -182,6 +180,33 @@ AWS IAM is a service that lets you control access to AWS resources. It helps you
 - **🆔 Access Key** – A unique identifier that allows a user or application to access AWS resources (2 per user).
 - **🔑 Secret Key** – A private key that works with the access key to authenticate requests securely (2 per user).
 
+
+### 🔑 AWS Key Management Service (KMS)  
+AWS **KMS** is like a **digital safe** for your encryption keys. It helps keep your data **locked and secure** by:  
+
+- **🔐 Creating encryption keys** to protect your files.  
+- **🔓 Locking & unlocking data** so only authorized users can access it.  
+- **⚙️ Automatically working** with AWS services like **S3, RDS, and Lambda** to secure data.  
+- **🛡️ Controlling access** using security policies to limit who can use your keys.  
+
+---
+
+### 🔒 AWS Secrets Manager  
+AWS **Secrets Manager** is like a **password manager** for AWS. It securely stores sensitive information, such as:  
+
+- **🗝️ Passwords, API keys, and credentials** for databases and applications.  
+- **🔄 Automatically rotating secrets** so passwords change periodically for better security.  
+- **🔍 Helping applications retrieve secrets** without exposing them in code.  
+- **⚠️ Controlling access** so only authorized users can see the secrets.  
+
+---
+
+### ✅ Why Use Them Together?  
+- **KMS** encrypts and protects your data.  
+- **Secrets Manager** keeps passwords and sensitive details safe.  
+
+
+---
 ---
 
 ## 🔧 AWS CLI & SDK Basics
@@ -338,29 +363,6 @@ Would you like additional details on **pricing** or a comparison with other CDNs
 
 ---
 
-## 🔑 AWS Key Management Service (KMS)  
-AWS **KMS** is like a **digital safe** for your encryption keys. It helps keep your data **locked and secure** by:  
-
-- **🔐 Creating encryption keys** to protect your files.  
-- **🔓 Locking & unlocking data** so only authorized users can access it.  
-- **⚙️ Automatically working** with AWS services like **S3, RDS, and Lambda** to secure data.  
-- **🛡️ Controlling access** using security policies to limit who can use your keys.  
-
----
-
-## 🔒 AWS Secrets Manager  
-AWS **Secrets Manager** is like a **password manager** for AWS. It securely stores sensitive information, such as:  
-
-- **🗝️ Passwords, API keys, and credentials** for databases and applications.  
-- **🔄 Automatically rotating secrets** so passwords change periodically for better security.  
-- **🔍 Helping applications retrieve secrets** without exposing them in code.  
-- **⚠️ Controlling access** so only authorized users can see the secrets.  
-
----
-
-## ✅ Why Use Them Together?  
-- **KMS** encrypts and protects your data.  
-- **Secrets Manager** keeps passwords and sensitive details safe.  
 
 ---
 
