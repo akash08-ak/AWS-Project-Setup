@@ -162,7 +162,6 @@ AWS Lambda lets you run code without managing servers. It executes only when tri
 #### Example
 Instead of running a server all the time, Lambda runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
 
-
 ---
 # 🔐 IAM & 🛡️ Security 
 ---
@@ -180,7 +179,6 @@ IAM helps organizations manage who can access their technology and resources sec
 - **🆔 Access Key** – A unique identifier that allows a user or application to access AWS resources (2 per user).
 - **🔑 Secret Key** – A private key that works with the access key to authenticate requests securely (2 per user).
 
-
 ### 🔑 AWS Key Management Service (KMS)  
 AWS **KMS** is like a **digital safe** for your encryption keys. It helps keep your data **locked and secure** by:  
 
@@ -189,8 +187,6 @@ AWS **KMS** is like a **digital safe** for your encryption keys. It helps keep y
 - **⚙️ Automatically working** with AWS services like **S3, RDS, and Lambda** to secure data.  
 - **🛡️ Controlling access** using security policies to limit who can use your keys.  
 
----
-
 ### 🔒 AWS Secrets Manager  
 AWS **Secrets Manager** is like a **password manager** for AWS. It securely stores sensitive information, such as:  
 
@@ -198,8 +194,6 @@ AWS **Secrets Manager** is like a **password manager** for AWS. It securely stor
 - **🔄 Automatically rotating secrets** so passwords change periodically for better security.  
 - **🔍 Helping applications retrieve secrets** without exposing them in code.  
 - **⚠️ Controlling access** so only authorized users can see the secrets.  
-
----
 
 ### ✅ Why Use Them Together?  
 - **KMS** encrypts and protects your data.  
