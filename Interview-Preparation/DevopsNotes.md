@@ -81,9 +81,90 @@ Unlike RDS, DynamoDB stores data in key-value pairs.
 - **Handles scaling automatically.**
 - **Used for gaming, IoT, analytics.**
 
-
+---
+# 🚀 Compute Services in AWS
 ---
 
+### 🚀 Amazon EC2 (Elastic Compute Cloud)
+Amazon EC2 provides virtual servers in the cloud to run applications.
+
+#### 🔧 How to Launch an Instance:
+1. Choose an **Amazon Machine Image (AMI)** containing the OS and software configurations.
+2. Select an **instance type** based on CPU, memory, storage, and networking requirements.
+3. Configure **Security Groups** (firewall rules).
+4. Set up **key pairs** for SSH access.
+
+### 🔑 Key Pairs (Secure Authentication)
+Key pairs are used for secure authentication when connecting to EC2 instances.
+
+- **🔓 Public Key** – Stored by AWS.
+- **🔑 Private Key** – Downloaded and used for secure login.
+
+### 🖼️ Amazon Machine Images (AMIs)
+AMIs are templates that define the OS and software for an EC2 instance.
+
+You can:
+- Use **AWS-provided AMIs**.
+- Create **custom AMIs**.
+- Share **AMIs with other AWS accounts**.
+
+#### 🖥️ How to Share an AMI with Another AWS Account
+
+- Open the **EC2 Dashboard** → Click **"Images"** → **"AMIs"**  
+- Find the AMI you want to share  
+- Click **"Modify Image Permissions"**  
+- Choose **"Private"** sharing  
+- Enter the **AWS account ID** you want to share the AMI with  
+- Click **"Save"**  
+- The AMI is now accessible by the target AWS account  
+- The receiving account can now **launch instances** from the shared AMI  
+- They can **copy the AMI** to their own account if needed   
+
+
+### 🛡️ Security Groups (Firewall Protection)
+Security Groups function as virtual firewalls, controlling inbound and outbound traffic.
+
+They:
+- **✅ Allow or ❌ Deny** specific network traffic.
+- **🔄 Are stateful**, meaning responses to allowed requests are automatically permitted.
+
+
+### 🔄 Auto Scaling Groups
+#### Definition
+Auto Scaling Groups in AWS automatically adjust the number of servers based on demand.
+
+#### 📌 Example
+Imagine you run an online store. During sales, more people visit, and you need extra servers. Auto Scaling Groups add or remove servers dynamically, saving costs while keeping your site running smoothly.
+
+
+### ⚖️ Load Balancers (ALB, NLB)
+#### Definition
+Load Balancers distribute incoming traffic across multiple resources to ensure high availability and optimal performance.
+
+#### Types
+- **🌐 Application Load Balancer (ALB)**
+  - Operates at Layer 7 (HTTP/HTTPS).
+  - Supports host-based and path-based routing.
+  - Ideal for microservices.
+
+- **🔗 Network Load Balancer (NLB)**
+  - Operates at Layer 4 (TCP/UDP).
+  - Handles high-performance, low-latency traffic.
+
+#### 🍽️ Example
+Think of a restaurant with multiple chefs. If everyone orders from one chef, they get overwhelmed. Load Balancers distribute traffic across multiple servers, just like spreading orders among chefs.
+
+
+### 🖥️ AWS Lambda (Serverless Functions)
+#### Definition
+AWS Lambda lets you run code without managing servers. It executes only when triggered.
+
+#### ⚡ Example
+Instead of running a server all the time, Lambda runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
+
+
+---
+---
 ## 🔐 IAM (Identity and Access Management)
 IAM helps organizations manage who can access their technology and resources securely. It ensures the right people have the right access to the right tools.
 
@@ -109,93 +190,6 @@ AWS IAM is a service that lets you control access to AWS resources. It helps you
 
 ---
 
-## 🚀 Amazon EC2 (Elastic Compute Cloud)
-### What is EC2?
-Amazon EC2 provides virtual servers in the cloud to run applications.
-
-### 🔧 How to Launch an Instance:
-1. Choose an **Amazon Machine Image (AMI)** containing the OS and software configurations.
-2. Select an **instance type** based on CPU, memory, storage, and networking requirements.
-3. Configure **Security Groups** (firewall rules).
-4. Set up **key pairs** for SSH access.
-
----
-
-## 🔑 Key Pairs (Secure Authentication)
-Key pairs are used for secure authentication when connecting to EC2 instances.
-
-- **🔓 Public Key** – Stored by AWS.
-- **🔑 Private Key** – Downloaded and used for secure login.
-
----
-
-## 🖼️ Amazon Machine Images (AMIs)
-AMIs are templates that define the OS and software for an EC2 instance.
-
-You can:
-- Use **AWS-provided AMIs**.
-- Create **custom AMIs**.
-- Share **AMIs with other AWS accounts**.
-
-### 🖥️ How to Share an AMI with Another AWS Account
-
-- Open the **EC2 Dashboard** → Click **"Images"** → **"AMIs"**  
-- Find the AMI you want to share  
-- Click **"Modify Image Permissions"**  
-- Choose **"Private"** sharing  
-- Enter the **AWS account ID** you want to share the AMI with  
-- Click **"Save"**  
-- The AMI is now accessible by the target AWS account  
-- The receiving account can now **launch instances** from the shared AMI  
-- They can **copy the AMI** to their own account if needed   
-
----
-
-## 🛡️ Security Groups (Firewall Protection)
-Security Groups function as virtual firewalls, controlling inbound and outbound traffic.
-
-They:
-- **✅ Allow or ❌ Deny** specific network traffic.
-- **🔄 Are stateful**, meaning responses to allowed requests are automatically permitted.
-
----
-
-## 🔄 Auto Scaling Groups
-### Definition
-Auto Scaling Groups in AWS automatically adjust the number of servers based on demand.
-
-### 📌 Example
-Imagine you run an online store. During sales, more people visit, and you need extra servers. Auto Scaling Groups add or remove servers dynamically, saving costs while keeping your site running smoothly.
-
----
-
-## ⚖️ Load Balancers (ALB, NLB)
-### Definition
-Load Balancers distribute incoming traffic across multiple resources to ensure high availability and optimal performance.
-
-### Types
-- **🌐 Application Load Balancer (ALB)**
-  - Operates at Layer 7 (HTTP/HTTPS).
-  - Supports host-based and path-based routing.
-  - Ideal for microservices.
-
-- **🔗 Network Load Balancer (NLB)**
-  - Operates at Layer 4 (TCP/UDP).
-  - Handles high-performance, low-latency traffic.
-
-### 🍽️ Example
-Think of a restaurant with multiple chefs. If everyone orders from one chef, they get overwhelmed. Load Balancers distribute traffic across multiple servers, just like spreading orders among chefs.
-
----
-
-## 🖥️ AWS Lambda (Serverless Functions)
-### Definition
-AWS Lambda lets you run code without managing servers. It executes only when triggered.
-
-### ⚡ Example
-Instead of running a server all the time, Lambda runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
-
----
 
 ---
 
