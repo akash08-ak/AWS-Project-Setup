@@ -88,7 +88,7 @@ Unlike RDS, DynamoDB stores data in key-value pairs.
 ### 🚀 Amazon EC2 (Elastic Compute Cloud)
 Amazon EC2 provides virtual servers in the cloud to run applications.
 
-#### How to Launch an Instance:
+####  🔧 How to Launch an Instance:
 1. Choose an **Amazon Machine Image (AMI)** containing the OS and software configurations.
 2. Select an **instance type** based on CPU, memory, storage, and networking requirements.
 3. Configure **Security Groups** (firewall rules).
@@ -97,8 +97,8 @@ Amazon EC2 provides virtual servers in the cloud to run applications.
 ### 🔑 Key Pairs (Secure Authentication)
 Key pairs are used for secure authentication when connecting to EC2 instances.
 
-- ** Public Key** – Stored by AWS.
-- ** Private Key** – Downloaded and used for secure login.
+- ** 🔓 Public Key** – Stored by AWS.
+- ** 🔑Private Key** – Downloaded and used for secure login.
 
 ### 🖼️ Amazon Machine Images (AMIs)
 AMIs are templates that define the OS and software for an EC2 instance.
@@ -108,7 +108,7 @@ You can:
 - Create **custom AMIs**.
 - Share **AMIs with other AWS accounts**.
 
-#### How to Share an AMI with Another AWS Account
+####  🖥️ How to Share an AMI with Another AWS Account
 
 - Open the **EC2 Dashboard** → Click **"Images"** → **"AMIs"**  
 - Find the AMI you want to share  
@@ -142,12 +142,12 @@ Imagine you run an online store. During sales, more people visit, and you need e
 Load Balancers distribute incoming traffic across multiple resources to ensure high availability and optimal performance.
 
 #### Types
-- ** Application Load Balancer (ALB)**
+- ** 🌐 Application Load Balancer (ALB)**
   - Operates at Layer 7 (HTTP/HTTPS).
   - Supports host-based and path-based routing.
   - Ideal for microservices.
 
-- ** Network Load Balancer (NLB)**
+- ** 🔗 Network Load Balancer (NLB)**
   - Operates at Layer 4 (TCP/UDP).
   - Handles high-performance, low-latency traffic.
 
