@@ -220,4 +220,27 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 - **📡 Manages DNS resolution globally.**
 
 ---
+## 🛠️ Amazon CloudWatch – Keeping an Eye on Your AWS Resources  
+Amazon CloudWatch is like a **smart watchdog** 🐶 that constantly monitors your AWS resources, telling you how they are performing. It includes:  
+
+- **📜 Logs** – Think of logs like a diary 📖 where AWS services write down what happens. These logs help find errors or unusual activity.  
+- **📊 Metrics** – Numbers 📈 that show how things are running, like CPU usage or memory consumption.  
+- **⏰ Alarms** – Alerts 🚨 that notify you when something goes wrong, like high CPU usage on a server.  
+- **📺 Dashboards** – A control panel 🖥️ where you can see everything in one place with charts and graphs.  
+
+---
+
+## 🔍 AWS CloudTrail – Recording What Happens in AWS  
+CloudTrail is like a **security camera** 📷 for your AWS account. It records everything happening, like:  
+
+- **👤 Who did what?** – Tracks actions taken by users, such as deleting files or launching servers.  
+- **🔄 API calls** – Logs when AWS services are used.  
+- **🛡️ Security checks** – Helps detect any suspicious activity.  
+
+---
+
+## ⚡ Why Are They Important Together?  
+- **🟢 CloudWatch** helps track performance and health.  
+- **🔴 CloudTrail** records activities for security and troubleshooting.  
+
 
