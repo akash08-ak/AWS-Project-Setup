@@ -1,7 +1,8 @@
-# 🌥️ Cloud Computing
+# ☁️ Cloud Basics & 🚀 AWS Introduction
+---
+## 🌥️ Cloud Computing
 Cloud computing means using the internet to access computing power, storage, and applications whenever you need them, instead of buying and maintaining physical servers. You only pay for what you use, just like paying for electricity or water. This makes it flexible and cost-effective for businesses and individuals.
 
----
 
 ## 🌎 AWS Global Infrastructure (Regions, AZs, Edge Locations)
 AWS is a giant network of computers spread across the world. These computers are placed in different locations to make cloud services fast, reliable, and secure for people everywhere.
@@ -10,7 +11,7 @@ AWS is a giant network of computers spread across the world. These computers are
 - **🏢 Availability Zones (AZs)** – Groups of data centers inside a region. If one AZ faces a problem, the others keep things running smoothly.
 - **📡 Edge Locations** – Small centers placed in many locations to deliver content quickly. They help websites and apps load faster by storing data closer to users.
 
----
+
 
 ## ⚙️ Service Models: IaaS, PaaS, and SaaS
 - **🛠️ IaaS (Infrastructure as a Service)** – You get raw materials (servers, storage) to build things.
@@ -22,7 +23,6 @@ AWS is a giant network of computers spread across the world. These computers are
 - **📦 SaaS (Software as a Service)** – You get a ready-to-use app.
   - Example: Gmail, Dropbox, Microsoft 365.
 
----
 
 ## ☁️ Deployment Models: Public, Private, Hybrid Cloud
 - **🌍 Public Cloud** – Services available to anyone over the internet. Managed by cloud providers like AWS, Microsoft Azure, Google Cloud.
@@ -33,6 +33,53 @@ AWS is a giant network of computers spread across the world. These computers are
   
 - **🔄 Hybrid Cloud** – A mix of public and private clouds. Businesses use private clouds for sensitive data and public clouds for scalability.
   - Example: A company storing customer data securely in a private cloud but using a public cloud for running applications.
+
+---
+# 🗄️ Storage Services in AWS
+## 1️⃣ S3 (Simple Storage Service) 📂
+Think of S3 as a massive online storage system where you can keep files, documents, images, and videos.
+
+- **Buckets:** Like folders, used to organize files.
+- **Objects:** The actual files stored.
+- **Permissions:** Control who can access data.
+
+## 2️⃣ EBS (Elastic Block Store) 💾
+EBS works like a virtual hard drive for cloud servers.
+
+- **Used for:** Databases, applications, high-speed workloads.
+- **Snapshots:** Create backups easily.
+- **Attach/detach:** Volumes for EC2 instances.
+
+## 3️⃣ EFS (Elastic File System) 🗂️
+EFS is shared storage that multiple EC2 instances can access at the same time.
+
+- **Ideal for:** Content management, big data analytics, file sharing.
+- **Scalable:** Automatically adjusts based on usage.
+
+## 4️⃣ AWS Backup 🔄
+A managed service that automates backups for AWS resources.
+
+- **Centralized management.**
+- **Scheduled backups & recovery.**
+- **Prevents accidental data loss.**
+
+---
+
+# 🗃️ Database Services in AWS
+## 1️⃣ RDS (Relational Database Service) 📊
+Traditional database service that organizes data into structured tables.
+
+- **Engines:** MySQL, PostgreSQL, SQL Server, Oracle.
+- **AWS manages:** Setup, scaling, backups.
+- **Used for:** Business apps, websites, transactional systems.
+
+## 2️⃣ DynamoDB (NoSQL Database) ⚡
+Unlike RDS, DynamoDB stores data in key-value pairs.
+
+- **Super fast & scalable.**
+- **Handles scaling automatically.**
+- **Used for gaming, IoT, analytics.**
+
 
 ---
 
@@ -148,51 +195,6 @@ AWS Lambda lets you run code without managing servers. It executes only when tri
 Instead of running a server all the time, Lambda runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
 
 ---
-
-## 🗄️ Storage Services in AWS
-### 1️⃣ S3 (Simple Storage Service) 📂
-Think of S3 as a massive online storage system where you can keep files, documents, images, and videos.
-
-- **Buckets:** Like folders, used to organize files.
-- **Objects:** The actual files stored.
-- **Permissions:** Control who can access data.
-
-### 2️⃣ EBS (Elastic Block Store) 💾
-EBS works like a virtual hard drive for cloud servers.
-
-- **Used for:** Databases, applications, high-speed workloads.
-- **Snapshots:** Create backups easily.
-- **Attach/detach:** Volumes for EC2 instances.
-
-### 3️⃣ EFS (Elastic File System) 🗂️
-EFS is shared storage that multiple EC2 instances can access at the same time.
-
-- **Ideal for:** Content management, big data analytics, file sharing.
-- **Scalable:** Automatically adjusts based on usage.
-
-### 4️⃣ AWS Backup 🔄
-A managed service that automates backups for AWS resources.
-
-- **Centralized management.**
-- **Scheduled backups & recovery.**
-- **Prevents accidental data loss.**
-
----
-
-## 🗃️ Database Services in AWS
-### 1️⃣ RDS (Relational Database Service) 📊
-Traditional database service that organizes data into structured tables.
-
-- **Engines:** MySQL, PostgreSQL, SQL Server, Oracle.
-- **AWS manages:** Setup, scaling, backups.
-- **Used for:** Business apps, websites, transactional systems.
-
-### 2️⃣ DynamoDB (NoSQL Database) ⚡
-Unlike RDS, DynamoDB stores data in key-value pairs.
-
-- **Super fast & scalable.**
-- **Handles scaling automatically.**
-- **Used for gaming, IoT, analytics.**
 
 ---
 
