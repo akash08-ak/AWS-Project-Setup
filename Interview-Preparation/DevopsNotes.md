@@ -89,6 +89,23 @@ You can:
 - Create **custom AMIs**.
 - Share **AMIs with other AWS accounts**.
 
+## 🖥️ How to Share an AMI with Another AWS Account
+
+- Open the **EC2 Dashboard** → Click **"Images"** → **"AMIs"**  
+- Find the AMI you want to share  
+- Click **"Modify Image Permissions"**  
+- Choose **"Private"** sharing  
+- Enter the **AWS account ID** you want to share the AMI with  
+- Click **"Save"**  
+- The AMI is now accessible by the target AWS account  
+- The receiving account can now **launch instances** from the shared AMI  
+- They can **copy the AMI** to their own account if needed   
+
+---
+
+I hope this helps! 🚀 Let me know if you need further clarification. 😊
+
+
 ---
 
 ## 🛡️ Security Groups (Firewall Protection)
