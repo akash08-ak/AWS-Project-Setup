@@ -281,6 +281,50 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 - 📩 **How it works:** Messages are placed in a queue 📬, and workers process them when they are ready.  
 - 🛍️ **Example Use Case:** An **e-commerce website** 🛒 uses SQS to handle customer orders. When an order is placed, it goes into the queue, and the system processes it one by one.
 
+![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS.png)
+
+## 📌 SQS Message Processing Flow
+
+### 🏗️ Scenario:
+- A **user uploads a video** 🎥 to **Server A1 or A2**.
+- The video is then **stored in Amazon S3** 🗄️.
+- A **message is sent to the Amazon SQS queue** 📩.
+- **Servers B1 and B2** 🔎 constantly monitor the queue.
+- Once a message arrives, **one of the servers (B1 or B2) picks it up** to process the video.
+
+---
+
+## ⏳ **Visibility Timeout**
+When **Server B1 picks up a message** for processing:
+- That message **becomes invisible** ⛔ to other servers (such as B2) **for a set period** (Visibility Timeout).
+- This **prevents duplicate processing** ⚠️ by multiple servers at the same time.
+- If **B1 successfully processes the message**, ✅ it is **removed** from the queue.
+
+---
+
+## ❌ **Dead Letter Queue (DLQ)**
+What happens if **Server B1 fails to process** the message?
+1. ⏳ After the **visibility timeout** expires, the message becomes **visible again**, allowing **Server B2** to pick it up.
+2. 🛑 If **both Server B1 and B2** fail multiple times ⏳, the message is **moved to the Dead Letter Queue (DLQ)**.
+3. 🔎 DLQ stores **failed messages** for further investigation and troubleshooting 🛠️.
+
+---
+
+### 🔄 **Process Overview**
+1️⃣ **User uploads a video** → 📤 Server A1/A2 → 🗄️ Stored in S3  
+2️⃣ **Message added to SQS** 📩 → Servers B1 & B2 **watch** it  
+3️⃣ **Processing starts** 🚀 → One server picks it up  
+4️⃣ ✅ If processed successfully → **Message removed**  
+5️⃣ ❌ If failed → **Visibility timeout ends** → Other server tries  
+6️⃣ ❗ If failed multiple times → **Moved to DLQ for further debugging**
+
+---
+
+💡 **This setup ensures efficient, reliable, and error-managed processing of tasks using SQS!** 🚀  
+
+Let me know if you want any modifications or a more in-depth explanation! 😊
+
+
 ---
 
 ## 📢 **Amazon SNS (Simple Notification Service)**  
