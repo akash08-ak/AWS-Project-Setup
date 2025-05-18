@@ -243,4 +243,29 @@ CloudTrail is like a **security camera** 📷 for your AWS account. It records e
 - **🟢 CloudWatch** helps track performance and health.  
 - **🔴 CloudTrail** records activities for security and troubleshooting.  
 
+---
+
+## 🔑 AWS Key Management Service (KMS)  
+AWS **KMS** is like a **digital safe** for your encryption keys. It helps keep your data **locked and secure** by:  
+
+- **🔐 Creating encryption keys** to protect your files.  
+- **🔓 Locking & unlocking data** so only authorized users can access it.  
+- **⚙️ Automatically working** with AWS services like **S3, RDS, and Lambda** to secure data.  
+- **🛡️ Controlling access** using security policies to limit who can use your keys.  
+
+---
+
+## 🔒 AWS Secrets Manager  
+AWS **Secrets Manager** is like a **password manager** for AWS. It securely stores sensitive information, such as:  
+
+- **🗝️ Passwords, API keys, and credentials** for databases and applications.  
+- **🔄 Automatically rotating secrets** so passwords change periodically for better security.  
+- **🔍 Helping applications retrieve secrets** without exposing them in code.  
+- **⚠️ Controlling access** so only authorized users can see the secrets.  
+
+---
+
+## ✅ Why Use Them Together?  
+- **KMS** encrypts and protects your data.  
+- **Secrets Manager** keeps passwords and sensitive details safe.  
 
