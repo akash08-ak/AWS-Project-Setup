@@ -291,7 +291,47 @@ CloudTrail is like a **security camera** 📷 for your AWS account. It records e
 
 - **👤 Who did what?** – Tracks actions taken by users, such as deleting files or launching servers.  
 - **🔄 API calls** – Logs when AWS services are used.  
-- **🛡️ Security checks** – Helps detect any suspicious activity.  
+- **🛡️ Security checks** – Helps detect any suspicious activity.
+  
+---
+# 🚀 Amazon CloudFront (CDN - Content Delivery Network)
+
+## 🌍 What is CloudFront?
+Amazon CloudFront is a **web service** that enables businesses and web application developers to **distribute content efficiently**, ensuring:
+- **Low latency ⚡**
+- **High availability 🔄**
+- **Cost-effective delivery 💰**
+
+---
+
+## 🔗 How CloudFront Works
+Imagine a **server is located in the U.S.** 🌎, but users from **India 🇮🇳** and **Dubai 🇦🇪** are accessing the website hosted there.  
+Without a CDN, the request has to travel to the U.S., increasing **latency ⏳** (the time taken for request and response).  
+
+### ✅ Solution: CloudFront Edge Locations  
+CloudFront places **Edge Locations 📍** worldwide to **cache** content closer to users:
+1. **User request goes to the nearest Edge Location.**  
+2. **If it’s the first request**, the **Edge Location fetches** content from the origin **U.S. server** and delivers it to the user.  
+3. **Next time, CloudFront serves content directly** from the Edge Location (instead of fetching from the U.S.), **reducing latency** ⚡.  
+4. **Cached content stays in the Edge Location for 24 hours 🕒**, ensuring faster responses for repeated requests.  
+
+---
+
+## 🖼️ CloudFront Architecture Diagram
+![CloudFront Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/CloudFront.png)
+
+---
+
+## 🎯 Benefits of CloudFront
+- **Faster Load Times 🚀**: Improves user experience by caching content globally.
+- **Reduced Latency ⚡**: No need for long-distance data transfers.
+- **Lower Bandwidth Costs 💰**: Less load on the origin server.
+- **Security 🔒**: Supports HTTPS and protects against DDoS attacks.
+- **Integration with AWS Services 🤝**: Works seamlessly with **S3, EC2, Lambda@Edge, and more.**
+
+---
+
+Would you like additional details on **pricing** or a comparison with other CDNs? 😊🔥
 
 ---
 
