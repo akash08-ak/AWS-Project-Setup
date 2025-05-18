@@ -222,7 +222,17 @@ CloudTrail is like a **security camera** 📷 for your AWS account. It records e
 - **🟢 CloudWatch** helps track performance and health.  
 - **🔴 CloudTrail** records activities for security and troubleshooting.
 
+---
+# 🛠️ Developer Tools
+---
+### 💻 AWS CLI (Command Line Interface)
+- A **powerful tool** for managing AWS services using command-line commands.
+- Acts like a **remote control** for AWS, allowing users to configure resources **without a web browser**.
 
+### 📦 AWS SDK (Software Development Kit)
+- Enables developers to **integrate AWS services** into their applications.
+- Supports multiple programming languages including **Python 🐍, Java ☕, and JavaScript 📜**.
+- Helps in building and scaling applications efficiently.
 
 --- 
 # 🚀 Amazon CloudFront (CDN - Content Delivery Network)
@@ -399,11 +409,9 @@ SNS is more like a **radio broadcast** 📡—it sends messages instantly to mul
 | **Who Receives It?** | One system picks up each message 🎯 | Many receivers at once 📢    |
 | **Best For**         | Handling tasks in order ✅          | Sending alerts or updates 🔥 |
 
----
 
-## 🔧 AWS CLI & SDK Basics
-- **💻 AWS CLI (Command Line Interface)** – Like a remote control for AWS! It lets you manage AWS services using typed commands instead of clicking around in a web browser.
-- **📦 AWS SDK (Software Development Kit)** – Lets developers use AWS inside their own applications by using programming languages like Python, Java, and JavaScript.
+
+
 
 
 
