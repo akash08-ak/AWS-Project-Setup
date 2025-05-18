@@ -56,3 +56,89 @@ AWS IAM is a service that lets you **control access to AWS resources**. It helps
 - AWS SDK **lets developers use AWS inside their own applications**.
 - Instead of typing commands, developers can use programming languages like **Python, Java, and JavaScript** to interact with AWS.
 
+
+
+
+
+# Core AWS Services
+
+## Compute
+
+### **What is EC2 (Elastic Compute Cloud)?**
+
+#### **1. Launching Instances**  
+An EC2 instance is essentially a virtual server in AWS. To launch one, you:
+- Choose an **Amazon Machine Image (AMI)**, which contains the OS and software configurations.
+- Select an **instance type** based on CPU, memory, storage, and networking requirements.
+- Configure **Security Groups**, which act as a virtual firewall to control inbound and outbound traffic.
+- Set up **key pairs** for secure SSH access to your instance.
+
+#### **2. Key Pairs**  
+Key pairs are used for authentication when connecting to instances via SSH. They consist of:
+- A **public key**, stored by AWS.
+- A **private key**, downloaded and used to connect securely.
+
+#### **3. Amazon Machine Images (AMIs)**  
+AMIs are pre-configured templates that define the OS and software for an EC2 instance. You can:
+- Use AWS-provided AMIs.
+- Create your own custom AMIs.
+- Share AMIs with other AWS accounts.
+
+#### **4. Security Groups**  
+Security Groups function as virtual firewalls, defining access rules. They:
+- Allow or deny specific inbound/outbound traffic.
+- Are stateful, meaning responses to allowed inbound requests are automatically permitted.
+
+---
+
+### **What is Auto Scaling Groups?**
+
+#### **Definition**  
+Auto Scaling Groups in AWS help maintain availability and ensure your application scales automatically based on demand. They:
+- Launch or terminate instances dynamically based on load.
+- Use scaling policies (e.g., CPU utilization thresholds) to adjust capacity.
+- Improve fault tolerance by automatically replacing unhealthy instances.
+- Work with Load Balancers to distribute traffic efficiently.
+
+#### **Example**  
+Imagine you run an online store. During sales, more people visit, and you need extra servers. When traffic is low, you don’t want to pay for unused servers. **Auto Scaling Groups** automatically add or remove servers based on demand, saving costs and keeping your site running smoothly.
+
+---
+
+### **What is Load Balancers (ALB, NLB)?**
+
+#### **Definition**  
+Load Balancers distribute incoming traffic across multiple resources to ensure high availability and optimal performance. AWS offers:
+
+#### **Application Load Balancer (ALB)**
+- Operates at **Layer 7 (HTTP/HTTPS)**.
+- Supports routing based on request content (host-based or path-based).
+- Ideal for **microservices or containerized applications**.
+
+#### **Network Load Balancer (NLB)**
+- Operates at **Layer 4 (TCP/UDP)**.
+- Handles **millions of requests per second** with low latency.
+- Suitable for **high-performance applications requiring fast response times**.
+
+#### **Example**  
+Think of a restaurant with multiple chefs. If everyone orders from just one chef, they get overwhelmed. Instead, orders are spread out so food comes faster. **Load Balancers** do the same thing—distribute traffic across multiple servers to prevent overload and improve performance.
+
+- **ALB (Application Load Balancer)** is smart—it decides where requests should go based on the URL.  
+- **NLB (Network Load Balancer)** is fast—it routes requests quickly for high-speed applications.
+
+---
+
+### **What is Lambda (Serverless Functions)?**
+
+#### **Definition**  
+AWS Lambda lets you **run code without provisioning or managing servers**. It:
+- Executes functions **on demand** when triggered by events (e.g., API Gateway, S3, DynamoDB, etc.).
+- Scales **automatically** based on workload.
+- Supports multiple languages like **Python, Node.js, Java**, and more.
+- Charges **only** for execution time—making it **cost-efficient**.
+
+#### **Example**  
+Instead of always running a server, what if it only worked when needed?  
+**Lambda** runs small pieces of code only when triggered (like sending an email when someone signs up). No server management, no wasted cost—just instant execution when needed.
+
+
