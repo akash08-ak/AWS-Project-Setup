@@ -1,10 +1,10 @@
 # ☁️ Cloud Basics & 🚀 AWS Introduction
 ---
-## 🌥️ Cloud Computing
+### 🌥️ Cloud Computing
 Cloud computing means using the internet to access computing power, storage, and applications whenever you need them, instead of buying and maintaining physical servers. You only pay for what you use, just like paying for electricity or water. This makes it flexible and cost-effective for businesses and individuals.
 
 
-## 🌎 AWS Global Infrastructure (Regions, AZs, Edge Locations)
+### 🌎 AWS Global Infrastructure (Regions, AZs, Edge Locations)
 AWS is a giant network of computers spread across the world. These computers are placed in different locations to make cloud services fast, reliable, and secure for people everywhere.
 
 - **📍 Regions** – Big areas where AWS has a lot of computers. Each region has multiple Availability Zones (AZs) inside it.
@@ -13,7 +13,7 @@ AWS is a giant network of computers spread across the world. These computers are
 
 
 
-## ⚙️ Service Models: IaaS, PaaS, and SaaS
+### ⚙️ Service Models: IaaS, PaaS, and SaaS
 - **🛠️ IaaS (Infrastructure as a Service)** – You get raw materials (servers, storage) to build things.
   - Example: AWS EC2, Microsoft Azure Virtual Machines.
   
@@ -24,7 +24,7 @@ AWS is a giant network of computers spread across the world. These computers are
   - Example: Gmail, Dropbox, Microsoft 365.
 
 
-## ☁️ Deployment Models: Public, Private, Hybrid Cloud
+### ☁️ Deployment Models: Public, Private, Hybrid Cloud
 - **🌍 Public Cloud** – Services available to anyone over the internet. Managed by cloud providers like AWS, Microsoft Azure, Google Cloud.
   - Example: Google Drive, AWS S3, Microsoft OneDrive.
   
