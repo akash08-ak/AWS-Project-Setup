@@ -231,8 +231,6 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 - **🔄 Helps route traffic efficiently.**
 - **📡 Manages DNS resolution globally.**
 
-![Route 53 Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Route-53.png)
-
 
 ### 🚀 Functions of AWS Route 53
 
@@ -259,6 +257,7 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 
 
 ### 🌎 How Route 53 Resolves DNS Queries
+![Route 53 Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Route-53.png)
 
 1. **User requests** `www.example.com` 💻.
 2. The request goes to a **DNS resolver** (usually provided by the ISP 🔍).
@@ -347,7 +346,6 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 - **Servers B1 and B2** 🔎 constantly monitor the queue.
 - Once a message arrives, **one of the servers (B1 or B2) picks it up** to process the video.
 
----
 
 ### ⏳ **Visibility Timeout**
 When **Server B1 picks up a message** for processing:
@@ -355,15 +353,11 @@ When **Server B1 picks up a message** for processing:
 - This **prevents duplicate processing** ⚠️ by multiple servers at the same time.
 - If **B1 successfully processes the message**, ✅ it is **removed** from the queue.
 
----
-
 ### ❌ **Dead Letter Queue (DLQ)**
 What happens if **Server B1 fails to process** the message?
 1. ⏳ After the **visibility timeout** expires, the message becomes **visible again**, allowing **Server B2** to pick it up.
 2. 🛑 If **both Server B1 and B2** fail multiple times ⏳, the message is **moved to the Dead Letter Queue (DLQ)**.
 3. 🔎 DLQ stores **failed messages** for further investigation and troubleshooting 🛠️.
-
----
 
 ### 🔄 **Process Overview**
 1️⃣ **User uploads a video** → 📤 Server A1/A2 → 🗄️ Stored in S3  
