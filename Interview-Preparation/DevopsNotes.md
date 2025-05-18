@@ -134,3 +134,54 @@ AWS Lambda lets you run **code without managing servers**. It executes only **wh
 #### **Example**  
 Instead of running a server all the time, **Lambda** runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
 
+---
+
+## 14. What are Storage Services in AWS?
+
+### 1. S3 (Simple Storage Service)
+Think of S3 as a massive online storage system where you can keep files, documents, images, and videos. It's highly scalable, meaning you can store as much data as you need without worrying about running out of space.
+
+- **Buckets:** Like folders, buckets help you organize your files.
+- **Objects:** The actual files you store in S3 are called objects.
+- **Permissions:** You control who can access your data, whether it's private, shared, or public.
+
+### 2. EBS (Elastic Block Store)
+EBS works like a virtual hard drive for your cloud servers. If you're running an EC2 instance (a cloud-based computer), EBS lets you store files persistently. Even if you turn off your instance, the data remains safe.
+
+- Used for databases, applications, and high-speed workloads.
+- Supports snapshots, meaning you can create backups of your storage.
+- You can attach or detach volumes from EC2 instances as needed.
+
+### 3. EFS (Elastic File System)
+EFS is shared storage, like a network drive that multiple computers (EC2 instances) can access at the same time.
+
+- Perfect for applications that need shared access.
+- Automatically scales based on usage—no need to manage storage capacity.
+- Great for content management systems, big data analytics, and file sharing.
+
+### 4. AWS Backup
+A managed service that automates backups for your AWS resources like databases, storage, and applications.
+
+- Centralized backup management.
+- Supports scheduled backups and recovery options.
+- Helps prevent data loss from accidental deletions or failures.
+
+---
+
+## 15. What are Database Services in AWS?
+
+### 1. RDS (Relational Database Service)
+RDS is a traditional database service that organizes data into tables with rows and columns. Think of it like an Excel spreadsheet but much more powerful.
+
+- Supports different database engines like **MySQL, PostgreSQL, SQL Server, and Oracle**.
+- AWS manages tasks like **setup, backups, patching, and scaling** automatically.
+- Ideal for business applications, websites, and transactional systems.
+
+### 2. DynamoDB (NoSQL Database)
+Unlike RDS, DynamoDB is a NoSQL database that stores data in **key-value pairs** instead of tables.
+
+- Super fast and scalable—great for apps that need quick data retrieval.
+- Automatically handles scaling without downtime.
+- Commonly used for gaming apps, IoT devices, and real-time analytics.
+
+
