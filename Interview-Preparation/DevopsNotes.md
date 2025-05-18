@@ -199,62 +199,110 @@ AWS **Secrets Manager** is like a **password manager** for AWS. It securely stor
 - **KMS** encrypts and protects your data.  
 - **Secrets Manager** keeps passwords and sensitive details safe.  
 
+---
+# 🔍 Monitoring & 📊 Auditing 
+---
+### 🛠️ Amazon CloudWatch – Keeping an Eye on Your AWS Resources  
+Amazon CloudWatch is like a **smart watchdog** 🐶 that constantly monitors your AWS resources, telling you how they are performing. It includes:  
+
+- **📜 Logs** – Think of logs like a diary 📖 where AWS services write down what happens. These logs help find errors or unusual activity.  
+- **📊 Metrics** – Numbers 📈 that show how things are running, like CPU usage or memory consumption.  
+- **⏰ Alarms** – Alerts 🚨 that notify you when something goes wrong, like high CPU usage on a server.  
+- **📺 Dashboards** – A control panel 🖥️ where you can see everything in one place with charts and graphs.  
+
+
+### 🔍 AWS CloudTrail – Recording What Happens in AWS  
+CloudTrail is like a **security camera** 📷 for your AWS account. It records everything happening, like:  
+
+- **👤 Who did what?** – Tracks actions taken by users, such as deleting files or launching servers.  
+- **🔄 API calls** – Logs when AWS services are used.  
+- **🛡️ Security checks** – Helps detect any suspicious activity.
+
+### ⚡ Why Are They Important Together?  
+- **🟢 CloudWatch** helps track performance and health.  
+- **🔴 CloudTrail** records activities for security and troubleshooting.
+
+
+
+--- 
+# 🚀 Amazon CloudFront (CDN - Content Delivery Network)
+---
+### 🌍 What is CloudFront?
+Amazon CloudFront is a **web service** that enables businesses and web application developers to **distribute content efficiently**, ensuring:
+- **Low latency ⚡**
+- **High availability 🔄**
+- **Cost-effective delivery 💰**
+
+### 🔗 How CloudFront Works
+Imagine a **server is located in the U.S.** 🌎, but users from **India 🇮🇳** and **Dubai 🇦🇪** are accessing the website hosted there.  
+Without a CDN, the request has to travel to the U.S., increasing **latency ⏳** (the time taken for request and response).  
+
+### ✅ Solution: CloudFront Edge Locations  
+CloudFront places **Edge Locations 📍** worldwide to **cache** content closer to users:
+1. **User request goes to the nearest Edge Location.**  
+2. **If it’s the first request**, the **Edge Location fetches** content from the origin **U.S. server** and delivers it to the user.  
+3. **Next time, CloudFront serves content directly** from the Edge Location (instead of fetching from the U.S.), **reducing latency** ⚡.  
+4. **Cached content stays in the Edge Location for 24 hours 🕒**, ensuring faster responses for repeated requests.  
+
+### 🖼️ CloudFront Architecture Diagram
+![CloudFront Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/CloudFront.png)
+
+### 🎯 Benefits of CloudFront
+- **Faster Load Times 🚀**: Improves user experience by caching content globally.
+- **Reduced Latency ⚡**: No need for long-distance data transfers.
+- **Lower Bandwidth Costs 💰**: Less load on the origin server.
+- **Security 🔒**: Supports HTTPS and protects against DDoS attacks.
+- **Integration with AWS Services 🤝**: Works seamlessly with **S3, EC2, Lambda@Edge, and more.**
+
+
 
 ---
+# 🌐 VPC (Virtual Private Cloud)
 ---
 
-## 🔧 AWS CLI & SDK Basics
-- **💻 AWS CLI (Command Line Interface)** – Like a remote control for AWS! It lets you manage AWS services using typed commands instead of clicking around in a web browser.
-- **📦 AWS SDK (Software Development Kit)** – Lets developers use AWS inside their own applications by using programming languages like Python, Java, and JavaScript.
-
----
-
-
----
-
-## 🌐 VPC (Virtual Private Cloud)
+### 🌐 VPC (Virtual Private Cloud)
 Imagine a VPC like your own private neighborhood in the cloud.
 
-### Key Components
+#### Key Components
 - **🚦 Subnets:** Different streets (public/private access).
 - **🛣️ Route Tables:** Traffic rules for connectivity.
 - **🌍 Internet Gateway:** Entry for internet access.
 - **🔒 NAT Gateway:** Private resources access internet securely.
 
----
 
-## 🛡️ Security Groups & NACLs
+### 🛡️ Security Groups & NACLs
 - **🛑 Security Groups:** Work like personal bodyguards for instances.
 - **🚧 Network ACLs (NACLs):** Define security rules at the subnet level.
 
----
 
-## 🔗 VPC Peering & Transit Gateway
+### 🔗 VPC Peering & Transit Gateway
 - **🤝 VPC Peering:** Direct connection between private cloud networks.
 - **🚙 Transit Gateway:** Central hub for connecting multiple VPCs.
 
----
 
-## 🔐 VPN & Direct Connect
+### 🔐 VPN & Direct Connect
 - **🔗 VPN (Virtual Private Network):** Secure tunnel between office and AWS VPC.
 - **⚡ Direct Connect:** Private, high-speed fiber cable for fast cloud connectivity.
 
+
+---
+# 🌍 Route 53
 ---
 
-## 🌍 Route 53 (DNS Service)
+### 🌍 Route 53 (DNS Service)
 Route 53 is like your phone’s contact list, mapping domain names to IP addresses.
 
 - **🔄 Helps route traffic efficiently.**
 - **📡 Manages DNS resolution globally.**
 
 
-### 🚀 Functions of AWS Route 53
+#### 🚀 Functions of AWS Route 53
 
-#### 1. **🌐 DNS Management**
+##### 1. **🌐 DNS Management**
 - Route 53 is a **highly available** and **scalable** DNS service.
 - It translates **domain names** (e.g., `www.example.com`) into **IP addresses** (`xx.xx.xx.xx`) so browsers can locate servers.
 
-#### 2. **🔀 Traffic Management**
+##### 2. **🔀 Traffic Management**
 - If you purchase a domain from **GoDaddy** but host your site on **AWS**, Route 53 ensures traffic reaches AWS servers correctly.
 - It provides **routing policies** such as:
   - ✅ **Simple Routing**: Maps a domain to a single IP.
@@ -262,12 +310,12 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
   - 🌍 **Geolocation Routing**: Routes users based on their physical location.
   - 🔄 **Failover Routing**: Redirects traffic to backup servers if the primary server fails.
 
-#### 3. **📊 Availability Management**
+##### 3. **📊 Availability Management**
 - Route 53 **monitors server health** using **health checks** 🏥.
 - If a server fails ❌, Route 53 **automatically redirects traffic** to another healthy server ✅.
 - It enables **high availability** by distributing traffic across multiple resources.
 
-#### 4. **📝 Domain Name Registration**
+##### 4. **📝 Domain Name Registration**
 - You can **purchase domain names** directly from **AWS Route 53** 🔑.
 - If you own a domain elsewhere (e.g., **GoDaddy**), you can **transfer** it to Route 53 for centralized management 🔄.
 
@@ -290,89 +338,23 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 - 🔒 **Secure:** Supports DNSSEC for domain security.
 - 🤝 **Integrates with AWS Services:** Works seamlessly with **EC2, S3, CloudFront**, and other AWS resources.
 
-
----
-## 🛠️ Amazon CloudWatch – Keeping an Eye on Your AWS Resources  
-Amazon CloudWatch is like a **smart watchdog** 🐶 that constantly monitors your AWS resources, telling you how they are performing. It includes:  
-
-- **📜 Logs** – Think of logs like a diary 📖 where AWS services write down what happens. These logs help find errors or unusual activity.  
-- **📊 Metrics** – Numbers 📈 that show how things are running, like CPU usage or memory consumption.  
-- **⏰ Alarms** – Alerts 🚨 that notify you when something goes wrong, like high CPU usage on a server.  
-- **📺 Dashboards** – A control panel 🖥️ where you can see everything in one place with charts and graphs.  
-
----
-
-## 🔍 AWS CloudTrail – Recording What Happens in AWS  
-CloudTrail is like a **security camera** 📷 for your AWS account. It records everything happening, like:  
-
-- **👤 Who did what?** – Tracks actions taken by users, such as deleting files or launching servers.  
-- **🔄 API calls** – Logs when AWS services are used.  
-- **🛡️ Security checks** – Helps detect any suspicious activity.
   
----
-# 🚀 Amazon CloudFront (CDN - Content Delivery Network)
-
-## 🌍 What is CloudFront?
-Amazon CloudFront is a **web service** that enables businesses and web application developers to **distribute content efficiently**, ensuring:
-- **Low latency ⚡**
-- **High availability 🔄**
-- **Cost-effective delivery 💰**
 
 ---
-
-## 🔗 How CloudFront Works
-Imagine a **server is located in the U.S.** 🌎, but users from **India 🇮🇳** and **Dubai 🇦🇪** are accessing the website hosted there.  
-Without a CDN, the request has to travel to the U.S., increasing **latency ⏳** (the time taken for request and response).  
-
-### ✅ Solution: CloudFront Edge Locations  
-CloudFront places **Edge Locations 📍** worldwide to **cache** content closer to users:
-1. **User request goes to the nearest Edge Location.**  
-2. **If it’s the first request**, the **Edge Location fetches** content from the origin **U.S. server** and delivers it to the user.  
-3. **Next time, CloudFront serves content directly** from the Edge Location (instead of fetching from the U.S.), **reducing latency** ⚡.  
-4. **Cached content stays in the Edge Location for 24 hours 🕒**, ensuring faster responses for repeated requests.  
-
+# 📩 AWS SQS (Simple Queue Service) & 📢 SNS (Simple Notification Service)  
 ---
 
-## 🖼️ CloudFront Architecture Diagram
-![CloudFront Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/CloudFront.png)
-
----
-
-## 🎯 Benefits of CloudFront
-- **Faster Load Times 🚀**: Improves user experience by caching content globally.
-- **Reduced Latency ⚡**: No need for long-distance data transfers.
-- **Lower Bandwidth Costs 💰**: Less load on the origin server.
-- **Security 🔒**: Supports HTTPS and protects against DDoS attacks.
-- **Integration with AWS Services 🤝**: Works seamlessly with **S3, EC2, Lambda@Edge, and more.**
-
----
-
-Would you like additional details on **pricing** or a comparison with other CDNs? 😊🔥
-
----
-
-## ⚡ Why Are They Important Together?  
-- **🟢 CloudWatch** helps track performance and health.  
-- **🔴 CloudTrail** records activities for security and troubleshooting.  
-
----
-
-
----
-
-# 🚀 Amazon SQS & SNS Explained Simply  
-
-## 🏷️ **Amazon SQS (Simple Queue Service)**  
+### 🏷️ **Amazon SQS (Simple Queue Service)**  
 Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (tasks) arrive in the queue and wait for their turn to be processed. The system ensures messages don’t get lost, even if things get busy.  
 
-### 🔹 **Key Features**  
+#### 🔹 **Key Features**  
 - 🛠️ **Purpose:** Helps different parts of an application communicate without being directly connected.  
 - 📩 **How it works:** Messages are placed in a queue 📬, and workers process them when they are ready.  
 - 🛍️ **Example Use Case:** An **e-commerce website** 🛒 uses SQS to handle customer orders. When an order is placed, it goes into the queue, and the system processes it one by one.
 
 ![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS.png)
 
-### 📌 SQS Message Processing Flow
+#### 📌 SQS Message Processing Flow
 - A **user uploads a video** 🎥 to **Server A1 or A2**.
 - The video is then **stored in Amazon S3** 🗄️.
 - A **message is sent to the Amazon SQS queue** 📩.
@@ -380,19 +362,19 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 - Once a message arrives, **one of the servers (B1 or B2) picks it up** to process the video.
 
 
-### ⏳ **Visibility Timeout**
+#### ⏳ **Visibility Timeout**
 When **Server B1 picks up a message** for processing:
 - That message **becomes invisible** ⛔ to other servers (such as B2) **for a set period** (Visibility Timeout).
 - This **prevents duplicate processing** ⚠️ by multiple servers at the same time.
 - If **B1 successfully processes the message**, ✅ it is **removed** from the queue.
 
-### ❌ **Dead Letter Queue (DLQ)**
+#### ❌ **Dead Letter Queue (DLQ)**
 What happens if **Server B1 fails to process** the message?
 1. ⏳ After the **visibility timeout** expires, the message becomes **visible again**, allowing **Server B2** to pick it up.
 2. 🛑 If **both Server B1 and B2** fail multiple times ⏳, the message is **moved to the Dead Letter Queue (DLQ)**.
 3. 🔎 DLQ stores **failed messages** for further investigation and troubleshooting 🛠️.
 
-### 🔄 **Process Overview**
+#### 🔄 **Process Overview**
 1️⃣ **User uploads a video** → 📤 Server A1/A2 → 🗄️ Stored in S3  
 2️⃣ **Message added to SQS** 📩 → Servers B1 & B2 **watch** it  
 3️⃣ **Processing starts** 🚀 → One server picks it up  
@@ -401,25 +383,27 @@ What happens if **Server B1 fails to process** the message?
 6️⃣ ❗ If failed multiple times → **Moved to DLQ for further debugging**
 
 
----
-
-## 📢 **Amazon SNS (Simple Notification Service)**  
+### 📢 **Amazon SNS (Simple Notification Service)**  
 SNS is more like a **radio broadcast** 📡—it sends messages instantly to multiple people at once. If something important happens, SNS will alert multiple services or users.  
 
-### 🔹 **Key Features**  
+#### 🔹 **Key Features**  
 - 🚀 **Purpose:** Delivers messages instantly to multiple subscribers.  
 - 🔔 **How it works:** One sender **publishes** a message, and all **subscribers** receive it.  
 - ⛈️ **Example Use Case:** A **weather app** 🌦️ uses SNS to send alerts to users about severe storms.
 
----
-
-## 🔍 Key Differences: SQS vs. SNS  
+### 🔍 Key Differences: SQS vs. SNS  
 
 | 📌 Feature           | 🎟️ SQS (Queue)                      | 📡 SNS (Broadcast)           |
 |----------------------|--------------------------------------|------------------------------|
 | **Message Type**     | Stored and processed later ⏳       | Instant notification ⚡      |
 | **Who Receives It?** | One system picks up each message 🎯 | Many receivers at once 📢    |
 | **Best For**         | Handling tasks in order ✅          | Sending alerts or updates 🔥 |
+
+---
+
+## 🔧 AWS CLI & SDK Basics
+- **💻 AWS CLI (Command Line Interface)** – Like a remote control for AWS! It lets you manage AWS services using typed commands instead of clicking around in a web browser.
+- **📦 AWS SDK (Software Development Kit)** – Lets developers use AWS inside their own applications by using programming languages like Python, Java, and JavaScript.
 
 
 
