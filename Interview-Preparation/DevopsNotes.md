@@ -223,7 +223,7 @@ CloudTrail is like a **security camera** 📷 for your AWS account. It records e
 - **🔴 CloudTrail** records activities for security and troubleshooting.
 
 ---
-# 🛠️ Developer Tools
+# 🛠️ <div align="center">Developer Tools</div>
 ---
 ### 💻 AWS CLI (Command Line Interface)
 - A **powerful tool** for managing AWS services using command-line commands.
