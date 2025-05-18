@@ -1,5 +1,3 @@
-# AWS Fundamentals
-
 ## 1. What is Cloud Computing?
 Cloud computing means using the internet to access computing power, storage, and applications whenever you need them, instead of buying and maintaining physical servers. You only pay for what you use, just like paying for electricity or water. This makes it flexible and cost-effective for businesses and individuals.
 
@@ -57,10 +55,6 @@ AWS IAM is a service that lets you **control access to AWS resources**. It helps
 - Instead of typing commands, developers can use programming languages like **Python, Java, and JavaScript** to interact with AWS.
 
 ---
-
-# Core AWS Services
-
-## Compute
 
 ### 7. What is EC2 (Elastic Compute Cloud)?
 
