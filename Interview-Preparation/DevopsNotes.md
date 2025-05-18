@@ -13,7 +13,6 @@ AWS is a giant network of computers spread across the world. These computers are
 - **📡 Edge Locations** – Small centers placed in many locations to deliver content quickly. They help websites and apps load faster by storing data closer to users.
 
 
-
 ### ⚙️ Service Models: IaaS, PaaS, and SaaS
 - **🛠️ IaaS (Infrastructure as a Service)** – You get raw materials (servers, storage) to build things.
   - Example: AWS EC2, Microsoft Azure Virtual Machines.
