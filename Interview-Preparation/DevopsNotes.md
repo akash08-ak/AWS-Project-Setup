@@ -184,4 +184,43 @@ Unlike RDS, DynamoDB is a NoSQL database that stores data in **key-value pairs**
 - Automatically handles scaling without downtime.
 - Commonly used for gaming apps, IoT devices, and real-time analytics.
 
+---
+
+## 16. What is VPC (Virtual Private Cloud)?
+
+Imagine a VPC like your own private neighborhood in the cloud. Just like a gated community, it's isolated from others, giving you control over how things connect inside and outside.
+
+### Key Components in a VPC:
+- **Subnets**: Think of subnets as different streets in your neighborhood. Some streets allow visitors (**public subnets**), while others are private and hidden (**private subnets**).
+- **Route Tables**: Like traffic rules, route tables decide where network traffic should go within your VPC.
+- **Internet Gateway (IGW)**: This is the main entrance that lets you connect your public subnet resources to the internet.
+- **NAT Gateway**: This is like a secret backdoor that lets private subnet resources access the internet **without exposing them directly**.
+
+---
+
+## 17. What are Security Groups & NACLs?
+
+- **Security Groups**: Think of these as personal bodyguards for your instances. They decide **who can enter and exit** (inbound and outbound traffic).
+- **Network ACLs (NACLs)**: These are like security rules at the **street level** (subnet level), controlling which types of traffic can pass through.
+
+---
+
+## 18. What is VPC Peering & Transit Gateway?
+
+- **VPC Peering**: Imagine two private neighborhoods connected by a secret pathway. VPC Peering lets two VPCs talk to each other **without** using the internet.
+- **Transit Gateway**: Instead of multiple secret pathways, Transit Gateway acts like a **central highway** connecting many VPCs easily.
+
+---
+
+## 19. What is VPN & Direct Connect?
+
+- **VPN (Virtual Private Network)**: Think of VPN as a **secure tunnel** between your office and your cloud VPC over the **public internet**.
+- **Direct Connect**: Instead of using the public internet, **Direct Connect** is like having a **private, high-speed fiber cable** connecting your office and cloud.
+
+---
+
+## 20. What is Route 53 (DNS)?
+
+**Route 53** is like your phone’s contact list. If you type **www.example.com**, Route 53 finds the correct IP address and connects you to the website. It also helps route traffic efficiently across different locations.
+
 
