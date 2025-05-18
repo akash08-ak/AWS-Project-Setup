@@ -103,11 +103,6 @@ You can:
 
 ---
 
-I hope this helps! 🚀 Let me know if you need further clarification. 😊
-
-
----
-
 ## 🛡️ Security Groups (Firewall Protection)
 Security Groups function as virtual firewalls, controlling inbound and outbound traffic.
 
@@ -300,9 +295,7 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 
 ![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS.png)
 
-## 📌 SQS Message Processing Flow
-
-### 🏗️ Scenario:
+### 📌 SQS Message Processing Flow
 - A **user uploads a video** 🎥 to **Server A1 or A2**.
 - The video is then **stored in Amazon S3** 🗄️.
 - A **message is sent to the Amazon SQS queue** 📩.
@@ -311,7 +304,7 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 
 ---
 
-## ⏳ **Visibility Timeout**
+### ⏳ **Visibility Timeout**
 When **Server B1 picks up a message** for processing:
 - That message **becomes invisible** ⛔ to other servers (such as B2) **for a set period** (Visibility Timeout).
 - This **prevents duplicate processing** ⚠️ by multiple servers at the same time.
@@ -319,7 +312,7 @@ When **Server B1 picks up a message** for processing:
 
 ---
 
-## ❌ **Dead Letter Queue (DLQ)**
+### ❌ **Dead Letter Queue (DLQ)**
 What happens if **Server B1 fails to process** the message?
 1. ⏳ After the **visibility timeout** expires, the message becomes **visible again**, allowing **Server B2** to pick it up.
 2. 🛑 If **both Server B1 and B2** fail multiple times ⏳, the message is **moved to the Dead Letter Queue (DLQ)**.
@@ -334,12 +327,6 @@ What happens if **Server B1 fails to process** the message?
 4️⃣ ✅ If processed successfully → **Message removed**  
 5️⃣ ❌ If failed → **Visibility timeout ends** → Other server tries  
 6️⃣ ❗ If failed multiple times → **Moved to DLQ for further debugging**
-
----
-
-💡 **This setup ensures efficient, reliable, and error-managed processing of tasks using SQS!** 🚀  
-
-Let me know if you want any modifications or a more in-depth explanation! 😊
 
 
 ---
