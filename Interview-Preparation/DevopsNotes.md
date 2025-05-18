@@ -231,6 +231,51 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 - **🔄 Helps route traffic efficiently.**
 - **📡 Manages DNS resolution globally.**
 
+![Route 53 Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Route-53.png)
+
+
+### 🚀 Functions of AWS Route 53
+
+#### 1. **🌐 DNS Management**
+- Route 53 is a **highly available** and **scalable** DNS service.
+- It translates **domain names** (e.g., `www.example.com`) into **IP addresses** (`xx.xx.xx.xx`) so browsers can locate servers.
+
+#### 2. **🔀 Traffic Management**
+- If you purchase a domain from **GoDaddy** but host your site on **AWS**, Route 53 ensures traffic reaches AWS servers correctly.
+- It provides **routing policies** such as:
+  - ✅ **Simple Routing**: Maps a domain to a single IP.
+  - ⚡ **Latency-Based Routing**: Directs users to the closest AWS region for lower latency.
+  - 🌍 **Geolocation Routing**: Routes users based on their physical location.
+  - 🔄 **Failover Routing**: Redirects traffic to backup servers if the primary server fails.
+
+#### 3. **📊 Availability Management**
+- Route 53 **monitors server health** using **health checks** 🏥.
+- If a server fails ❌, Route 53 **automatically redirects traffic** to another healthy server ✅.
+- It enables **high availability** by distributing traffic across multiple resources.
+
+#### 4. **📝 Domain Name Registration**
+- You can **purchase domain names** directly from **AWS Route 53** 🔑.
+- If you own a domain elsewhere (e.g., **GoDaddy**), you can **transfer** it to Route 53 for centralized management 🔄.
+
+
+### 🌎 How Route 53 Resolves DNS Queries
+
+1. **User requests** `www.example.com` 💻.
+2. The request goes to a **DNS resolver** (usually provided by the ISP 🔍).
+3. If cached, the resolver immediately returns the IP. Otherwise:
+   - The resolver queries the **Root DNS Server** 🏛, which directs it to the appropriate **Top-Level Domain (TLD) Server** (e.g., `.com`, `.in`).
+   - The TLD server forwards the request to **Route 53’s authoritative name server** 🏠, which stores the domain’s IP address.
+   - The resolver retrieves the IP 📦 and forwards it to the user’s browser.
+4. The browser uses the **IP address** to connect to the correct server 🔗.
+
+
+### 🎯 Benefits of AWS Route 53
+- ⚡ **Fast & Reliable:** High-speed DNS resolution with AWS infrastructure.
+- 📈 **Scalable:** Handles millions of DNS queries efficiently.
+- 🔒 **Secure:** Supports DNSSEC for domain security.
+- 🤝 **Integrates with AWS Services:** Works seamlessly with **EC2, S3, CloudFront**, and other AWS resources.
+
+
 ---
 ## 🛠️ Amazon CloudWatch – Keeping an Eye on Your AWS Resources  
 Amazon CloudWatch is like a **smart watchdog** 🐶 that constantly monitors your AWS resources, telling you how they are performing. It includes:  
