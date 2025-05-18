@@ -1,3 +1,4 @@
+---
 # ☁️ Cloud Basics & 🚀 AWS Introduction
 ---
 ### 🌥️ Cloud Computing
@@ -36,6 +37,7 @@ AWS is a giant network of computers spread across the world. These computers are
 
 ---
 # 🗄️ Storage Services in AWS
+---
 ## 1️⃣ S3 (Simple Storage Service) 📂
 Think of S3 as a massive online storage system where you can keep files, documents, images, and videos.
 
