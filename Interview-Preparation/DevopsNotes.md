@@ -3,14 +3,14 @@
 ## 1. What is Cloud Computing?
 Cloud computing means using the internet to access computing power, storage, and applications whenever you need them, instead of buying and maintaining physical servers. You only pay for what you use, just like paying for electricity or water. This makes it flexible and cost-effective for businesses and individuals.
 
-## 2. AWS Global Infrastructure (Regions, AZs, Edge Locations)
+## 2. What is AWS Global Infrastructure? (Regions, AZs, Edge Locations)
 AWS is a **giant network of computers** spread across the world. These computers are placed in different locations to make cloud services **fast, reliable, and secure** for people everywhere.
 
 - **Regions** – Big areas where AWS has a lot of computers. Each region has multiple **Availability Zones (AZs)** inside it.
 - **Availability Zones (AZs)** – Groups of **data centers** inside a region. If one AZ faces a problem, the others keep things running smoothly.
 - **Edge Locations** – Small centers placed in many locations to **deliver content quickly**. They help websites and apps load faster by **storing data closer to users**.
 
-## 3. What is IaaS, PaaS, SaaS? (Service Models)
+## 3. What are IaaS, PaaS, and SaaS? (Service Models)
 - **IaaS (Infrastructure as a Service)** – You get raw materials (**servers, storage**) to build things.  
   *Example:* AWS EC2, Microsoft Azure Virtual Machines.
 
@@ -20,7 +20,7 @@ AWS is a **giant network of computers** spread across the world. These computers
 - **SaaS (Software as a Service)** – You get a **ready-to-use app**.  
   *Example:* Gmail, Dropbox, Microsoft 365.
 
-## 4. What is Public Cloud, Private Cloud, Hybrid Cloud? (Deployment Models)
+## 4. What are Public, Private, and Hybrid Clouds? (Deployment Models)
 - **Public Cloud** – Services available to **anyone** over the internet. Managed by cloud providers like **AWS, Microsoft Azure, Google Cloud**.  
   *Example:* Google Drive, AWS S3, Microsoft OneDrive.
 
@@ -39,14 +39,14 @@ AWS IAM is a service that lets you **control access to AWS resources**. It helps
 - **What actions they can perform** (*authorization*)
 
 ### Key Components:
-- **Users** – Individual accounts with specific permissions (**5,000 users per account**).
-- **Groups** – A collection of users with shared permissions (**300 groups per account**).
-- **Roles** – Temporary access permissions for users or applications (**1,000 roles per account**).
-- **Policies** – Rules that define what users, groups, or roles can do (**10 policies per user and per role**).
-- **Access Key** – A unique identifier that allows a user or application to access AWS resources (**2 per user**).
-- **Secret Key** – A private key that works with the access key to authenticate requests securely (**2 per user**).
+1. **Users** – Individual accounts with specific permissions (**5,000 users per account**).
+2. **Groups** – A collection of users with shared permissions (**300 groups per account**).
+3. **Roles** – Temporary access permissions for users or applications (**1,000 roles per account**).
+4. **Policies** – Rules that define what users, groups, or roles can do (**10 policies per user and per role**).
+5. **Access Key** – A unique identifier that allows a user or application to access AWS resources (**2 per user**).
+6. **Secret Key** – A private key that works with the access key to authenticate requests securely (**2 per user**).
 
-## 6. AWS CLI & SDK Basics
+## 6. What are AWS CLI & SDK Basics?
 
 ### AWS CLI (Command Line Interface)
 - **Like a remote control for AWS** – It lets you manage AWS services using **typed commands** instead of clicking around in a web browser.
@@ -56,89 +56,87 @@ AWS IAM is a service that lets you **control access to AWS resources**. It helps
 - AWS SDK **lets developers use AWS inside their own applications**.
 - Instead of typing commands, developers can use programming languages like **Python, Java, and JavaScript** to interact with AWS.
 
-
-
-
+---
 
 # Core AWS Services
 
 ## Compute
 
-### **What is EC2 (Elastic Compute Cloud)?**
+### 7. What is EC2 (Elastic Compute Cloud)?
 
-#### **1. Launching Instances**  
-An EC2 instance is essentially a virtual server in AWS. To launch one, you:
-- Choose an **Amazon Machine Image (AMI)**, which contains the OS and software configurations.
-- Select an **instance type** based on CPU, memory, storage, and networking requirements.
-- Configure **Security Groups**, which act as a virtual firewall to control inbound and outbound traffic.
-- Set up **key pairs** for secure SSH access to your instance.
+#### **Definition**  
+Amazon EC2 provides **virtual servers in the cloud** to run applications.
 
-#### **2. Key Pairs**  
-Key pairs are used for authentication when connecting to instances via SSH. They consist of:
-- A **public key**, stored by AWS.
-- A **private key**, downloaded and used to connect securely.
-
-#### **3. Amazon Machine Images (AMIs)**  
-AMIs are pre-configured templates that define the OS and software for an EC2 instance. You can:
-- Use AWS-provided AMIs.
-- Create your own custom AMIs.
-- Share AMIs with other AWS accounts.
-
-#### **4. Security Groups**  
-Security Groups function as virtual firewalls, defining access rules. They:
-- Allow or deny specific inbound/outbound traffic.
-- Are stateful, meaning responses to allowed inbound requests are automatically permitted.
+#### **How to Launch an Instance**
+1. Choose an **Amazon Machine Image (AMI)** containing the OS and software configurations.
+2. Select an **instance type** based on CPU, memory, storage, and networking requirements.
+3. Configure **Security Groups** (firewall rules).
+4. Set up **key pairs** for SSH access.
 
 ---
 
-### **What is Auto Scaling Groups?**
+### 8. What are Key Pairs?
+Key pairs are used for secure authentication when connecting to EC2 instances.
 
-#### **Definition**  
-Auto Scaling Groups in AWS help maintain availability and ensure your application scales automatically based on demand. They:
-- Launch or terminate instances dynamically based on load.
-- Use scaling policies (e.g., CPU utilization thresholds) to adjust capacity.
-- Improve fault tolerance by automatically replacing unhealthy instances.
-- Work with Load Balancers to distribute traffic efficiently.
-
-#### **Example**  
-Imagine you run an online store. During sales, more people visit, and you need extra servers. When traffic is low, you don’t want to pay for unused servers. **Auto Scaling Groups** automatically add or remove servers based on demand, saving costs and keeping your site running smoothly.
+- **Public Key** – Stored by AWS.
+- **Private Key** – Downloaded and used for secure login.
 
 ---
 
-### **What is Load Balancers (ALB, NLB)?**
+### 9. What are Amazon Machine Images (AMIs)?
+AMIs are templates that define the OS and software for an EC2 instance.
 
-#### **Definition**  
-Load Balancers distribute incoming traffic across multiple resources to ensure high availability and optimal performance. AWS offers:
-
-#### **Application Load Balancer (ALB)**
-- Operates at **Layer 7 (HTTP/HTTPS)**.
-- Supports routing based on request content (host-based or path-based).
-- Ideal for **microservices or containerized applications**.
-
-#### **Network Load Balancer (NLB)**
-- Operates at **Layer 4 (TCP/UDP)**.
-- Handles **millions of requests per second** with low latency.
-- Suitable for **high-performance applications requiring fast response times**.
-
-#### **Example**  
-Think of a restaurant with multiple chefs. If everyone orders from just one chef, they get overwhelmed. Instead, orders are spread out so food comes faster. **Load Balancers** do the same thing—distribute traffic across multiple servers to prevent overload and improve performance.
-
-- **ALB (Application Load Balancer)** is smart—it decides where requests should go based on the URL.  
-- **NLB (Network Load Balancer)** is fast—it routes requests quickly for high-speed applications.
+You can:
+1. Use **AWS-provided AMIs**.
+2. Create **custom AMIs**.
+3. Share AMIs **with other AWS accounts**.
 
 ---
 
-### **What is Lambda (Serverless Functions)?**
+### 10. What are Security Groups?
+Security Groups function as **virtual firewalls**, controlling inbound and outbound traffic.
+
+They:
+1. **Allow or deny** specific network traffic.
+2. Are **stateful**, meaning responses to allowed requests are automatically permitted.
+
+---
+
+### 11. What is Auto Scaling Groups?
 
 #### **Definition**  
-AWS Lambda lets you **run code without provisioning or managing servers**. It:
-- Executes functions **on demand** when triggered by events (e.g., API Gateway, S3, DynamoDB, etc.).
-- Scales **automatically** based on workload.
-- Supports multiple languages like **Python, Node.js, Java**, and more.
-- Charges **only** for execution time—making it **cost-efficient**.
+Auto Scaling Groups in AWS **automatically adjust** the number of servers based on demand.
 
 #### **Example**  
-Instead of always running a server, what if it only worked when needed?  
-**Lambda** runs small pieces of code only when triggered (like sending an email when someone signs up). No server management, no wasted cost—just instant execution when needed.
+Imagine you run an online store. During sales, more people visit, and you need extra servers. **Auto Scaling Groups** add or remove servers dynamically, saving costs while keeping your site running smoothly.
 
+---
+
+### 12. What are Load Balancers (ALB, NLB)?
+
+#### **Definition**  
+Load Balancers distribute incoming traffic across multiple resources to ensure **high availability and optimal performance**.
+
+#### **Types**
+1. **Application Load Balancer (ALB)**  
+   - Operates at **Layer 7 (HTTP/HTTPS)**.
+   - Supports **host-based and path-based routing**.
+   - Ideal for **microservices**.
+
+2. **Network Load Balancer (NLB)**  
+   - Operates at **Layer 4 (TCP/UDP)**.
+   - Handles **high-performance, low-latency traffic**.
+
+#### **Example**  
+Think of a restaurant with multiple chefs. If everyone orders from one chef, they get overwhelmed. **Load Balancers** distribute traffic across multiple servers, just like spreading orders among chefs.
+
+---
+
+### 13. What is Lambda (Serverless Functions)?
+
+#### **Definition**  
+AWS Lambda lets you run **code without managing servers**. It executes only **when triggered**.
+
+#### **Example**  
+Instead of running a server all the time, **Lambda** runs small functions on demand (like sending a confirmation email after a purchase). No server management—just instant execution.
 
