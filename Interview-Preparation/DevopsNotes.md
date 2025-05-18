@@ -89,7 +89,7 @@ You can:
 - Create **custom AMIs**.
 - Share **AMIs with other AWS accounts**.
 
-## 🖥️ How to Share an AMI with Another AWS Account
+### 🖥️ How to Share an AMI with Another AWS Account
 
 - Open the **EC2 Dashboard** → Click **"Images"** → **"AMIs"**  
 - Find the AMI you want to share  
