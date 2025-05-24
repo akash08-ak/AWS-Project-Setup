@@ -129,17 +129,51 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 - **etcd**: A key-value database that stores cluster state (e.g., Pods, nodes, IPs).
 - **Controller Manager**: Ensures desired state matches actual state by coordinating with API Server.
 
-📈 **Flow**:
-- etcd stores current cluster state.
-- Controller Manager compares it to desired state.
-- If not matching, it tells the Scheduler (via API Server) to assign new Pods to Nodes.
-
 ## ⚙️ Node/Worker Plane (Data Plane)
 
 - **Kubelet**: Talks to API Server, manages Pods, runs containers via runtime (e.g., Docker).
 - **Kube-proxy**: Assigns IPs, enables networking and load-balancing across Pods.
 - **Container Runtime**: Tool like Docker, Podman, containerd to run containers.
 - **Pod**: Smallest unit in K8s, can contain one or more containers sharing network/storage.
+
+## 📈 **Kubernetes Cluster Flow – Step-by-Step**
+
+1. 🧑‍💻 **User Sends Request**
+   - A user (or CI/CD pipeline) submits a YAML file (e.g., `Deployment`, `Service`) to the **API Server**.
+   - This YAML defines the **desired state** (e.g., 3 Pods of a web app).
+
+2. 🧭 **API Server Receives & Validates**
+   - API Server **validates** the YAML and **stores** it in **etcd** (the database of the cluster).
+   - etcd now holds the "desired state" of the cluster.
+
+3. 🔍 **Controller Manager Detects Difference**
+   - The **Controller Manager** constantly monitors etcd for any difference between:
+     - What the user wants (desired state)
+     - What is currently running (actual state)
+
+4. ⚠️ **Mismatch Found**
+   - If there’s a difference (e.g., 0 Pods running but 3 requested), the Controller Manager takes **action**.
+
+5. 🧠 **Scheduler Kicks In**
+   - The **Scheduler** is triggered via the **API Server**.
+   - It picks the **best Node** for the new Pod(s) based on:
+     - Available CPU/memory
+     - Node affinity
+     - Taints and tolerations
+
+6. 🛰️ **Kubelet on Target Node**
+   - Once the Node is selected, the **Kubelet** (agent on that Node) receives the instructions from the API Server.
+   - Kubelet uses the **Container Runtime** (like Docker or containerd) to **pull images** and **start containers** inside a **Pod**.
+
+7. 🧠 **Kube-proxy Handles Networking**
+   - The **Kube-proxy** on the Node assigns a **cluster IP** to the Pod.
+   - It updates the **network rules** for service discovery and load balancing.
+
+8. 📝 **Status Sent Back**
+   - Node status and Pod health are continuously sent back to the API Server and stored in **etcd**.
+   - Now, the **actual state = desired state**, so no further action is taken until the next change.
+
+
 
 
 
