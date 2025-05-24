@@ -271,6 +271,13 @@ Deployments update Pods gradually without downtime.
 Keeps desired Pod count and replaces failed Pods.  
 *Example:* If a Pod stops, a new one is created to keep the number constant.
 
+**Replication is managed in two ways:**  
+- **ReplicationController (RC):** Older method to keep Pods running. Now mostly replaced.  
+  *Example:* Ensures 3 Pods are running and recreates them if they crash.
+  
+- **ReplicaSet:** Newer, preferred way with better label support. Used by Deployments.  
+  *Example:* Maintains 5 Pods and allows matching based on advanced selectors.
+
 ---
 
 
