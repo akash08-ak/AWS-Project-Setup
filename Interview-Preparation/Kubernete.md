@@ -176,7 +176,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 ---
 # ⚙️ Key Kubernetes Concepts
 
-![Service&Deployement](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Service%26Deployement.png)
+![Service&Deployement](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Deployement%26Service.png)
 
 ## 🐳 1. Pods
 ### **What?**
