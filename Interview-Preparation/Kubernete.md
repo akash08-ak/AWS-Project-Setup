@@ -186,6 +186,9 @@ Kubernetes uses **Objects** to represent the **desired state** of your cluster. 
   - 🔁 Restart policies  
   - ⬆️ Upgrades  
   - 🛡️ Fault tolerance
+- 🔑 Each object is uniquely identified by:
+  - 🏷️ **Name**
+  - 🆔 **UID** (Unique Identifier)
 
 Once an object is created, **Kubernetes continuously works to match the actual cluster state with the desired state**.
 
