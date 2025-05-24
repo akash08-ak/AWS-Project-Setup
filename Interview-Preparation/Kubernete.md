@@ -249,6 +249,29 @@ You use selectors to:
 kubectl get pods --selector="environment=dev"
 ```
 ---
+# ⚙️ Key Kubernetes Concepts
+
+### 🔄 Load Balancing  
+Service spreads traffic evenly across Pods to avoid overload.  
+*Example:* Traffic is shared so no single Pod gets too busy.
+
+### 🔒 Reliability  
+Kubernetes restarts or replaces failed Pods automatically.  
+*Example:* If a Pod crashes, Kubernetes makes a new one to keep things running.
+
+### 📈 Scaling  
+Increase or decrease Pod copies manually or automatically.  
+*Example:* You add more Pods when traffic grows, or remove some when it drops.
+
+### 🚀 Rolling Updates  
+Deployments update Pods gradually without downtime.  
+*Example:* Your app keeps running while new versions are installed step-by-step.
+
+### 🔁 Replication  
+Keeps desired Pod count and replaces failed Pods.  
+*Example:* If a Pod stops, a new one is created to keep the number constant.
+---
+
 
 
 
