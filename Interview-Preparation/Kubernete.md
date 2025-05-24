@@ -12,7 +12,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
-## 🕰️ History of Kubernetes
+# 🕰️ History of Kubernetes
 
 - 🏗️ Developed by **Google** based on their internal system called **Borg** (later evolved into **Omega**) used to manage thousands of applications and services.
 - 📅 In **2014**, Google introduced **Kubernetes** as an open-source project.
@@ -21,14 +21,14 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
-## 🧪 Online Platforms for Kubernetes (K8s) Practice
+# 🧪 Online Platforms for Kubernetes (K8s) Practice
 
 - 🎮 [Kubernetes Playground](https://labs.play-with-k8s.com/)
 - 🧑‍🏫 [Play with Kubernetes Classroom](https://training.play-with-kubernetes.com/)
 
 ---
 
-## ☁️ Cloud-Based Kubernetes Services
+# ☁️ Cloud-Based Kubernetes Services
 
 - 🔷 **GKE** – Google Kubernetes Engine  
 - 🔶 **AKS** – Azure Kubernetes Service  
@@ -36,14 +36,14 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
-## 🛠️ Kubernetes Installation Tools
+# 🛠️ Kubernetes Installation Tools
 
 - 💻 **Minikube** – Run Kubernetes locally for learning and development.
 - ⚙️ **Kubeadm** – Tool to install and configure Kubernetes clusters manually or semi-automatically.
 
 ---
 
-## ⚠️ Problems Before Kubernetes 
+# ⚠️ Problems Before Kubernetes 
 
 - 🔌 **Containers could not communicate with each other**  
   → Difficult to manage distributed applications.
@@ -59,7 +59,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
-## 🌟 Key Features of Kubernetes
+# 🌟 Key Features of Kubernetes
 
 - 📈 **Autoscaling**  
   Automatically scales containers based on CPU/memory usage or custom metrics.
@@ -89,7 +89,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
-## ⚙️ Features Comparison: Kubernetes vs Docker Swarm
+# ⚙️ Features Comparison: Kubernetes vs Docker Swarm
 
 | Feature                  | Kubernetes                                    | Docker Swarm             |
 |--------------------------|-----------------------------------------------|-------------------------|
@@ -103,7 +103,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 
 ---
-## ☁️ Kubernetes Architecture Hierarchy
+# ☁️ Kubernetes Architecture Hierarchy
 
 <pre>
 ☁️ Cluster
@@ -116,6 +116,30 @@ It automates the **scheduling**, **running**, and **management** of isolated con
                     │
                     └── ⚙️ Application / Microservice
 </pre>
+
+---
+# ☸️ Kubernetes Architecture
+
+![K8s Architecture](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Kubernetes%20architecture.png)
+
+## 🧠 Control Plane Components
+
+- **API Server**: Central communication point; all control components talk through it.
+- **Kube Scheduler**: Assigns Pods to available Nodes based on resource availability.
+- **etcd**: A key-value database that stores cluster state (e.g., Pods, nodes, IPs).
+- **Controller Manager**: Ensures desired state matches actual state by coordinating with API Server.
+
+📈 **Flow**:
+- etcd stores current cluster state.
+- Controller Manager compares it to desired state.
+- If not matching, it tells the Scheduler (via API Server) to assign new Pods to Nodes.
+
+## ⚙️ Node/Worker Plane (Data Plane)
+
+- **Kubelet**: Talks to API Server, manages Pods, runs containers via runtime (e.g., Docker).
+- **Kube-proxy**: Assigns IPs, enables networking and load-balancing across Pods.
+- **Container Runtime**: Tool like Docker, Podman, containerd to run containers.
+- **Pod**: Smallest unit in K8s, can contain one or more containers sharing network/storage.
 
 
 
