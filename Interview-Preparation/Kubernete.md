@@ -270,6 +270,7 @@ Deployments update Pods gradually without downtime.
 ### 🔁 Replication  
 Keeps desired Pod count and replaces failed Pods.  
 *Example:* If a Pod stops, a new one is created to keep the number constant.
+
 ---
 
 
