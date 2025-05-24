@@ -362,7 +362,7 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 - 📩 **How it works:** Messages are placed in a queue 📬, and workers process them when they are ready.  
 - 🛍️ **Example Use Case:** An **e-commerce website** 🛒 uses SQS to handle customer orders. When an order is placed, it goes into the queue, and the system processes it one by one.
 
-![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS.png)
+![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS-Flow.png)
 
 #### 📌 SQS Message Processing Flow
 - A **user uploads a video** 🎥 to **Server A1 or A2**.
