@@ -255,7 +255,7 @@ CloudFront places **Edge Locations 📍** worldwide to **cache** content closer 
 4. **Cached content stays in the Edge Location for 24 hours 🕒**, ensuring faster responses for repeated requests.  
 
 ### 🖼️ CloudFront Architecture Diagram
-![CloudFront Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/CloudFront.png)
+![CloudFront Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/CloudeFrontFlow.png)
 
 ### 🎯 Benefits of CloudFront
 - **Faster Load Times 🚀**: Improves user experience by caching content globally.
