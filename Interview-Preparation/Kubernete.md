@@ -194,8 +194,8 @@ Once an object is created, **Kubernetes continuously works to match the actual c
 
 
 ### 🧱 Object Structure
-- 📝 `spec`: Desired state  
-- 📊 `status`: Actual state  
+- 📝 `spec`: What you want
+- 📊 `status`: What’s actually happening
 
 
 ## 🧰 Key Objects + Relations
