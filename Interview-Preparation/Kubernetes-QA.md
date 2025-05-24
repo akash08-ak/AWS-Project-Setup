@@ -102,3 +102,20 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 | 📊 **Logging & Monitoring** | Built-in tools available                       | Limited tools           |
 
 
+---
+## ☁️ Kubernetes Architecture Hierarchy
+
+☁️ Cluster
+  │
+  └── 🖥️ Node
+        │
+        └── 📦 Pod
+              │
+              └── 🐳 Container
+                    │
+                    └── ⚙️ Application / Microservice
+
+
+
+
+
