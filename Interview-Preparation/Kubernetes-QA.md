@@ -106,14 +106,14 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 ## ☁️ Kubernetes Architecture Hierarchy
 
 ☁️ Cluster
-  │
-  └── 🖥️ Node
-        │
-        └── 📦 Pod
-              │
-              └── 🐳 Container
-                    │
-                    └── ⚙️ Application / Microservice
+│
+└── 🖥️ Node
+│
+└── 📦 Pod
+│
+└── 🐳 Container
+│
+└── ⚙️ Application / Microservice
 
 
 
