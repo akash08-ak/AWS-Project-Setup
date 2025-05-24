@@ -89,4 +89,16 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ---
 
+## ⚙️ Features Comparison: Kubernetes vs Docker Swarm
+
+| Feature                  | Kubernetes                                    | Docker Swarm             |
+|--------------------------|-----------------------------------------------|-------------------------|
+| 🛠️ **Installation & Setup** | Complicated and time-consuming                 | ⚡ Fast and easy           |
+| 🐳 **Container Support**    | Works with almost all container types like Docker, containerd, etc. | Works mainly with Docker containers |
+| 🖥️ **GUI**                  | ✅ Available                                     | ❌ Not available           |
+| 💾 **Data Volumes**         | Shared only with containers in the same pod   | Can be shared with other containers |
+| 🔄 **Updates & Rollback**   | Supports progressive updates with health monitoring | Limited support         |
+| 📈 **Autoscaling**          | Supports both Horizontal Pod Autoscaling (HPA) and Vertical Pod Autoscaling (VPA) | Limited autoscaling     |
+| 📊 **Logging & Monitoring** | Built-in tools available                       | Limited tools           |
+
 
