@@ -193,20 +193,23 @@ Kubernetes uses **Objects** to represent the **desired state** of your cluster. 
 Once an object is created, **Kubernetes continuously works to match the actual cluster state with the desired state**.
 
 
-### 🧱 Object Structure
+## 🧱 Object Structure
 - 📝 `spec`: What you want
 - 📊 `status`: What’s actually happening
 
 
 ## 🧰 Key Objects + Relations
 
-- **Pod**: Runs one or more containers.  
-- **ReplicaSet**: Ensures a set number of Pods are running (manages Pods).  
+- **Pod**: Runs one or more containers.
+
+- **ReplicaSet**: Ensures a set number of Pods are running (manages Pods).
+
 - **Service**: Exposes Pods to network traffic.
 
-Example relation:  
-*ReplicaSet manages Pods*  
-*Service exposes Pods*
+### Example relations:
+
+- *ReplicaSet manages Pods*  
+- *Service exposes Pods*
 
 ---
 
