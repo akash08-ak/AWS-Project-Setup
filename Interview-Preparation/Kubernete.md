@@ -120,7 +120,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 ---
 # ☸️ Kubernetes Architecture
 
-![K8s Architecture](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Kubernetes%20architecture.png)
+![K8s Architecture](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Kubernetes%20Architecture.png)
 
 ## 🧠 Control Plane Components
 
