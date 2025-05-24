@@ -267,6 +267,31 @@ Kubernetes objects are typically defined in:
 | 🔌 `port`        | Port to expose for communication                               |
 | 💾 `volume`      | Persistent storage details                                      |
 
+---
+
+# ⚙️ Kubernetes Objects Management
+
+Kubernetes objects can be created and managed using different approaches, supported by the `kubectl` command-line tool.
+
+
+| 🧰 **Management Technique**      | 📦 **Operates On**           | 🌍 **Recommended Environment**    |
+|-------------------------------|------------------------------|----------------------------------|
+| 🧾 **Imperative Commands**     | Live objects (in-cluster)     | 🧪 Development & Testing          |
+| 📄 **Declarative Configuration** | YAML/JSON files (object config) | ✅ Production & CI/CD environments |
+
+---
+
+## 🧾 Declarative vs. Imperative
+
+### 📄 Declarative
+
+- You **declare** the desired state using configuration files (YAML/JSON).
+- Kubernetes figures out **how** to reach that state.
+- Promotes **repeatability**, **version control**, and **infrastructure as code**.
+
+### 🧰 Imperative
+- You issue commands directly to make changes.
+- Good for quick tests, development, and learning.
 
 
 
