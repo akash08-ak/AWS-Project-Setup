@@ -30,6 +30,13 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 ## ☁️ Cloud-Based Kubernetes Services
 
-- 🔷 **GKE** – Google Kubernetes Engine
-- 🔶 **AKS** – Azure Kubernetes Service
+- 🔷 **GKE** – Google Kubernetes Engine  
+- 🔶 **AKS** – Azure Kubernetes Service  
 - 🟩 **EKS** – Amazon Elastic Kubernetes Service
+
+---
+
+## 🛠️ Kubernetes Installation Tools
+
+- 💻 **Minikube** – Run Kubernetes locally for learning and development.
+- ⚙️ **Kubeadm** – Tool to install and configure Kubernetes clusters manually or semi-automatically.
