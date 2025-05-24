@@ -41,7 +41,7 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 - 💻 **Minikube** – Run Kubernetes locally for learning and development.
 - ⚙️ **Kubeadm** – Tool to install and configure Kubernetes clusters manually or semi-automatically.
 
-  ---
+---
 
 ## ⚠️ Problems Before Kubernetes 
 
