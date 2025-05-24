@@ -228,7 +228,6 @@ Each Kubernetes object has two key fields:
 
 ---
 
-✨ Kubernetes continuously reconciles your declared **spec** with the actual **status** to maintain a healthy, desired state for your cluster!
 
 
 
