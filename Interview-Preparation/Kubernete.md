@@ -211,14 +211,12 @@ Once an object is created, **Kubernetes continuously works to match the actual c
 - *ReplicaSet manages Pods*  
 - *Service exposes Pods*
 
----
-
 ## ⚙️ Management Methods
 
 - **Imperative**: Run commands directly (good for quick changes).  
 - **Declarative**: Define desired state in files (better for production).
 
-
+---
 # 🏷️ What are Labels?
 
 **Labels** are key-value pairs that can be **attached to Kubernetes objects** (like Pods, Services, Deployments, etc.).
@@ -242,8 +240,6 @@ labels:
 You use selectors to:
 - Group objects for **Services**, **Deployments**, **Monitoring**, etc.
 - Allow Kubernetes components to **target specific objects** with matching labels.
-
----
 
 ### 🧪 Example Use Cases
 
