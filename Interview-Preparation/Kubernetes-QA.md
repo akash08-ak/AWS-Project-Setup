@@ -63,6 +63,8 @@ It automates the **scheduling**, **running**, and **management** of isolated con
 
 - 📈 **Autoscaling**  
   Automatically scales containers based on CPU/memory usage or custom metrics.
+  - 🔄 **HPA (Horizontal Pod Autoscaler)**: Changes the number of pods.  
+  - 📏 **VPA (Vertical Pod Autoscaler)**: Changes pod resource limits (CPU/RAM).
 
 - ❤️ **Auto-Healing**  
   Restarts failed containers, replaces and reschedules them if nodes die.
