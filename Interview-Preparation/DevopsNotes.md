@@ -255,7 +255,7 @@ CloudFront places **Edge Locations 📍** worldwide to **cache** content closer 
 4. **Cached content stays in the Edge Location for 24 hours 🕒**, ensuring faster responses for repeated requests.  
 
 ### 🖼️ CloudFront Architecture Diagram
-![CloudFront Flow](Images/CloudeFrontFlow.png)
+![CloudFront Flow](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Interview-Preparation/Images/CloudeFrontFlow.png)
 
 ### 🎯 Benefits of CloudFront
 - **Faster Load Times 🚀**: Improves user experience by caching content globally.
@@ -331,7 +331,7 @@ Route 53 is like your phone’s contact list, mapping domain names to IP address
 
 
 ### 🌎 How Route 53 Resolves DNS Queries
-![Route 53 Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/Route-53.png)
+![Route 53 Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Interview-Preparation/Images/Route-53.png)
 
 1. **User requests** `www.example.com` 💻.
 2. The request goes to a **DNS resolver** (usually provided by the ISP 🔍).
@@ -362,7 +362,7 @@ Think of SQS like a **waiting line at a movie theater** 🎥🍿. Messages (task
 - 📩 **How it works:** Messages are placed in a queue 📬, and workers process them when they are ready.  
 - 🛍️ **Example Use Case:** An **e-commerce website** 🛒 uses SQS to handle customer orders. When an order is placed, it goes into the queue, and the system processes it one by one.
 
-![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Images/SQS-Flow.png)
+![SQS Diagram](https://github.com/akash08-ak/AWS-Project-Setup/blob/main/Interview-Preparation/Images/SQS-Flow.png)
 
 #### 📌 SQS Message Processing Flow
 - A **user uploads a video** 🎥 to **Server A1 or A2**.
